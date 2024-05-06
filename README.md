@@ -77,11 +77,11 @@ Classify Alphabet Soup Grant Application Data using Advanced Machine Learning Mo
     - Steps to Increase Model Performance
       - To increase model performance, the model’s neurons, layers and epochs were changed. In the second attempt at modeling, the neurons in each hidden layer were increased and a fourth hidden reLU layer was added. Adding more neurons speeds up the model and may reduce loss. Adding more layers considers more interactions between variables.
       - In the third attempt at modeling, the epochs were increased from 100 to 200. As the number of epochs increases, so does the amount of information provided to each neuron. Adding more epochs also increases likelihood that model will achieve optimal weight coefficient.
-      - In the fourth attempt, the model’s neurons, layers and epochs were increased. A fifth reLU layher was added and the epochs were increased from 200 to 250.
+      - In the fourth attempt, the model’s neurons, layers and epochs were increased. A fifth reLU layer was added and the epochs were increased from 200 to 250.
 
 - Summary
   - Model Overview
-    - This deep learning model aimed to predict if a company would be classified as successful or no successful based on features of their application. Out of the four models, the highest accuracy score was 72.7% with the lowest loss of 58.5%. These results are not accurate enough for the clients threshold of 75% so more modeling attempts with different hyperparameters would need to be built to create a more reliable binary classifier.
+    - This deep learning model aimed to predict if a company would be classified as successful or not successful based on features of their application. Out of the four models, the highest accuracy score was 72.7% with the lowest loss of 58.5%. These results are not accurate enough for the clients threshold of 75% so more modeling attempts with different hyperparameters would need to be built to create a more reliable binary classifier.
   - Additional Model Recommendation
     - Another model that could solve this classification problem is the Perceptron or linear binary classifier. The perceptron model mimics a biological neuron by receiving input data, weighting the information, and producing a clear output. It would be a good alternative method for classification because the model separates and classifies the data into two groups using linear equation. For the purpose of this project, those two groups would be successful and not successful.
 

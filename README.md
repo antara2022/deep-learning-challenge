@@ -5,23 +5,23 @@ Classify Alphabet Soup Grant Application Data using Advanced Machine Learning Mo
 ### Step 1 - Preprocess the Data
 - Read in the charity_data.csv to a Pandas DataFrame and identify the target and features.
 
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/68ef0e77-e96f-49e8-a6a7-c916c6dc4bcd)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/4546ccc4-c6ba-49e9-a07e-3a3ee19278d3)
 
 - Drop the EIN and NAME columns
 
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/184aa6bd-324c-4f6e-a531-647ab400a1c8)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/25187fbc-c976-4299-a0c8-d6831efe0329)
 
 - Determine the number of unique values for each column.
   - For columns that have more than 10 unique values, determine the number of data points for each unique value
   - Use the number of data points for each unique value to pick a cutoff point to bin "rare" categorical variables together in a new value, Other
 
- ![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/3b0c9736-9fe3-42d0-98c8-0775cd7c4c0c)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/532a0a15-68ee-4280-9e02-86d3b4feaf8a)
 
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/7788b48b-c34f-405a-93ed-266786e49e11)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/66adf80f-6b30-4e6e-ac93-e46f25ddcdf7)
 
 - Use pd.get_dummies() to encode categorical variables
 
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/8fc58b8e-6246-455d-839c-bc17151418c1)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/41c9ac1a-dfcc-4920-9b52-f1d690c5fdea)
 
 - Split the preprocessed data into a features array, X, and a target array, y. Use these arrays and the train_test_split function to split the data into training and testing datasets
 - Scale the training and testing features datasets by creating a StandardScaler instance, fitting it to the training data, then using the transform function
@@ -33,34 +33,28 @@ Classify Alphabet Soup Grant Application Data using Advanced Machine Learning Mo
 - Create an output layer with an appropriate activation function
 - Check the structure of the model
 
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/95985cb9-b518-4df5-9e15-1e3bef7f9564)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/ee1e2a2e-0536-4ad2-a622-d70850917fc3)
 
 - Compile and train the model
 - Evaluate the model using the test data to determine the loss and accuracy
 
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/5c2c2e74-5e7f-4d29-b5ed-4412ce28c049)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/aa7c1a2b-9623-4a09-a751-f36cdb3721e1)
 
 - Save and export results to an HDF5 file
 ### Step 3 - Optimize the Model
 - Optimize your model to achieve a target predictive accuracy higher than 75%
 - Model 2 structure
 
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/3ac7929b-317a-4ad8-b216-0af7bf9db6f7)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/b8cda9fe-6f9e-4df7-b564-b3a34b4addbe)
 
 - Model 2 loss and accuracy
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/25be4b2b-f29b-482c-990e-635d0be0d999)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/650a0536-8aef-419b-a631-601f6c8d8cf2)
 
 - Model 3 structure
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/b9c0a5b6-f2ed-43fc-99e4-3c16ec634216)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/032c36da-5b2a-462f-97c7-a678c3aff516)
 
 - Model 3 loss and accuracy
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/07dfdad0-3483-4b5d-8b62-ab7ff501522a)
-
-- Model 4 structure
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/1c354a6e-f7f3-4bfa-85b1-582f41555677)
-
-- Model 4 loss and accuracy
-![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/bc4a35e1-2524-4cc1-9060-96d86bf2cdf5)
+![image](https://github.com/antara2022/deep-learning-challenge/assets/112270155/b8bc6453-623a-4a96-90da-0f70091aab4d)
 
 ### Step 4 - Write a Report on the Neural Network Model
 - Purpose: The purpose of this project is to create a binary classifier that can predict whether applicants will be successful if backed by Alphabet Soup’s funding. This will allow Alphabet Soup to select applicants for funding with the best chance of success in their ventures.
@@ -73,15 +67,14 @@ Classify Alphabet Soup Grant Application Data using Advanced Machine Learning Mo
     - Model Structure
       - The neural network model utilizes three layers because an ideal starting point for NNM’s is 2-4 layers. There are 43 features so 100 neurons, or 2-3 times the amount of input features were used for the first hidden node. The second and third hidden nodes used 60 and 40 neurons respectively. The reLU activation function was utilized because it is ideal for modeling positive, nonlinear input data for classification or regression. The sigmoid function was utilized because its values are normalized to a probability between 0 and 1, which is ideal for a binary classification dataset.
     - Model Accuracy
-      - The first model had an accuracy score of 72.7%. After increasing the number of neurons and layers, the second model had an accuracy score of 72.5%. After increasing the epochs, the third model also had an accuracy score of 72.5%. After increasing the number of neurons, layers and epochs again, the fourth model had an accuracy score of 72.6%. These models did not reach the target model performance of 75%.
+      - The first model had an accuracy score of 72.5%. After increasing the number of layers, the second model had an accuracy score of 72.7%. After changing the activation function, the third model had an accuracy score of 72.6%. These models did not reach the target model performance of 75%.
     - Steps to Increase Model Performance
-      - To increase model performance, the model’s neurons, layers and epochs were changed. In the second attempt at modeling, the neurons in each hidden layer were increased and a fourth hidden reLU layer was added. Adding more neurons speeds up the model and may reduce loss. Adding more layers considers more interactions between variables.
-      - In the third attempt at modeling, the epochs were increased from 100 to 200. As the number of epochs increases, so does the amount of information provided to each neuron. Adding more epochs also increases likelihood that model will achieve optimal weight coefficient.
-      - In the fourth attempt, the model’s neurons, layers and epochs were increased. A fifth reLU layer was added and the epochs were increased from 200 to 250.
+      - To increase model performance, the model’s neurons, layers and epochs were changed. In the second attempt at modeling, a third hidden reLU layer was added. Adding more layers considers more interactions between variables.
+      - In the third attempt, the activation function was changed for layer1 and layer2.
 
 - Summary
   - Model Overview
-    - This deep learning model aimed to predict if a company would be classified as successful or not successful based on features of their application. Out of the four models, the highest accuracy score was 72.7% with the lowest loss of 58.5%. These results are not accurate enough for the clients threshold of 75% so more modeling attempts with different hyperparameters would need to be built to create a more reliable binary classifier.
+    - This deep learning model aimed to predict if a company would be classified as successful or not successful based on features of their application. Out of the three models, the highest accuracy score was 72.7% with the lowest loss of 55.1%. These results are not accurate enough for the clients threshold of 75% so more modeling attempts with different hyperparameters would need to be built to create a more reliable binary classifier.
   - Additional Model Recommendation
     - Another model that could solve this classification problem is the Perceptron or linear binary classifier. The perceptron model mimics a biological neuron by receiving input data, weighting the information, and producing a clear output. It would be a good alternative method for classification because the model separates and classifies the data into two groups using linear equation. For the purpose of this project, those two groups would be successful and not successful.
 
